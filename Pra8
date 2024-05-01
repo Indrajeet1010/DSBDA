@@ -1,0 +1,24 @@
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df=pd.read_csv(r"C:\Users\Indrajeet Patil\Desktop\jupyter projects\train.csv")
+df.head()
+df.info()
+df.describe()
+df.count()
+
+df.isnull().sum()
+df
+
+df1=df.dropna()
+df1
+
+df1.isnull().sum()
+df2=df1.drop(['Name', 'SibSp','Ticket','Pclass','PassengerId','Parch','Cabin','Embarked'], axis=1)
+df2.count()
+df2
+
+sns.set_theme(style="ticks", color_codes=True)
+sns.countplot(x ='Sex', data = df2)
+plt.show()
