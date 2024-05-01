@@ -22,3 +22,10 @@ df2
 sns.set_theme(style="ticks", color_codes=True)
 sns.countplot(x ='Sex', data = df2)
 plt.show()
+
+sns.countplot(x ='survived', data = df2)
+plt.show()
+
+sns.distplot(df2['Fare'], kde=False)
+plt.show()
+
