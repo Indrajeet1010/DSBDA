@@ -21,3 +21,17 @@ df
 df.describe()
 df["SepalLengthCm"].describe()
 df.groupby("Species").describe().sum()
+
+import pandas as pd
+speed=[10,88,75,25,15,36,41]
+x=np.mean(speed)
+print(x)
+
+speed=[10,88,75,25,15,36,41]
+x=np.median(speed)
+print(x)
+
+from scipy import stats
+speed=[10,88,75,25,15,36,41]
+x=stats.mode(speed)
+print(x)
