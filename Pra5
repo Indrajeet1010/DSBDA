@@ -1,0 +1,30 @@
+import pandas as pd 
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+
+df = df=pd.read_csv(r"C:\Users\Indrajeet Patil\Desktop\jupyter projects\Social_Network_Ads.csv")
+df
+
+df.dtypes
+df.isnull().sum()
+df.info()
+
+sns.countplot(df['Purchased'])
+plt.title('Distribution of Purchased or not')
+plt.xlabel('Purchased or not')
+plt.ylabel('Frequency')
+plt.show()
+
+plt.figure(figsize = (10,6))
+plt.hist(df['Age'], bins  = 6, color = 'blue', rwidth = 0.98)
+plt.title('Distribution of Age')
+plt.xlabel('Different Ages')
+plt.ylabel('Frequency')
+
+X = df.iloc[:,[2,3]].values
+print(X)
+
+y = df.iloc[:,4].values
+print(y)
